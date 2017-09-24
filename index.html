@@ -4464,29 +4464,29 @@ function rdate($param, $time=0) {
 														<div class="row">
 															<div class="col-md-6">
 																<div class="form-group">
-																	<input type="text" class="form-control" placeholder="Ваше имя*" id="name" required="required" data-validation-required-message="Пожалуйста, введите ваше имя!">
+																	<input type="text" class="form-control" placeholder="Ваше имя*" id="name2" required="required" data-validation-required-message="Пожалуйста, введите ваше имя!">
 																	<p class="help-block text-danger"></p>
 																</div>
 																<div class="form-group">
-																	<input type="email" class="form-control" placeholder="Ваш e-mail адрес*" id="email" required="required" data-validation-required-message="Пожалуйста, введите ваш e-mail адрес!">
+																	<input type="email" class="form-control" placeholder="Ваш e-mail адрес*" id="email2" required="required" data-validation-required-message="Пожалуйста, введите ваш e-mail адрес!">
 																	<p class="help-block text-danger"></p>
 																</div>
 																<div class="form-group">
-																	<input type="text" class="form-control" placeholder="Ваш номер телефона*" id="phone" required="required" data-validation-required-message="Пожалуйста, введите номер вашего телефона!">
+																	<input type="text" class="form-control" placeholder="Ваш номер телефона*" id="phone2" required="required" data-validation-required-message="Пожалуйста, введите номер вашего телефона!">
 																	<p class="help-block text-danger"></p>
 																</div>
 																<div class="form-group">
-																	<input type="text" class="form-control" placeholder="ИНН организации*" id="inn" required="required" data-validation-required-message="Пожалуйста, введите номер вашего телефона!">
+																	<input type="text" class="form-control" placeholder="ИНН организации*" id="inn2" required="required" data-validation-required-message="Пожалуйста, введите номер вашего телефона!">
 																	<p class="help-block text-danger"></p>
 																</div>
 															</div>
 															<div class="col-md-6">
 																<div class="form-group">
-																	<textarea class="form-control" placeholder="Комментарии, пожелания (по необходимости)" id="message"   data-validation-required-message="Пожалуйста, введите текст сообщения!"></textarea>
+																	<textarea class="form-control" placeholder="Комментарии, пожелания (по необходимости)" id="message2"   data-validation-required-message="Пожалуйста, введите текст сообщения!"></textarea>
 																	<p class="help-block text-danger"></p>
 																</div>
 																<div class="form-group">
-																	<textarea class="form-control" placeholder="Ваши банковские реквизиты в свободной форме" id="bank"  data-validation-required-message="Пожалуйста, введите текст сообщения!"></textarea>
+																	<textarea class="form-control" placeholder="Ваши банковские реквизиты в свободной форме" id="bank2"  data-validation-required-message="Пожалуйста, введите текст сообщения!"></textarea>
 																	<p class="help-block text-danger"></p>
 																</div> 
 															</div>
@@ -5076,8 +5076,14 @@ function rdate($param, $time=0) {
 	</script> 
 	<script type="text/javascript">
 		$(document).ready(function(){
-			$("#formSend").submit(function() { 
-
+			$("#formSend").submit(function() {  
+				var name =  $("#name2").val();
+				var phone =  $("#phone2").val();
+				var email =  $("#email2").val();
+				var inn =  $("#inn2").val();
+				var text =  $("#message2").val();
+				var bank =  $("#bank2").val();
+				var form_data = "name="+name+"&phone="+phone+"&email="+email+"&inn="+inn+"&text="+text+"&bank="+bank; 
 				var t = document.getElementsByClassName('ul_main'); 
 				var g = t[0].children;  
 				var table = new Array(g.length); 
@@ -5094,18 +5100,19 @@ function rdate($param, $time=0) {
 					table[i].unshift(c[0].innerHTML,bb[0].innerHTML,val); 
 				} 
  
-				var form_data = "";
+				//var form_data = "";
 				for(var i =0; i < table.length; i++)
 				{
 					form_data += "&par"+i+"="+table[i][0]+";"+table[i][1]+";"+table[i][2];
 				}
 				form_data += "&count="+table.length;
-				var form_data2 = $(this).serialize(); 
+				 console.log(form_data);
 				$.ajax({
 				type: "POST", 
 				url: "contact-form.php", 
-				data: form_data2 + form_data,
+				data: form_data,
 				success: function() { 
+					console.log(form_data);
 						alert("Ваше сообщение отправлено!");
 				},
 				error: function () {
@@ -5129,19 +5136,7 @@ function rdate($param, $time=0) {
 				},
 			});
 		});
-	}); 
-	$(document).ready(function(){
-	$(function(){
-		$("a.poster").click(function() { // все ссылки с классом .poster
-			var value = $(this).attr("value"); // поле value
-			var href = $(this).attr("href"); // поле href - адрес, куда посылать
-			$.POST( href, {value: value}, function(data) { // посылаем
-				alert( data );
-			});
-			return false;
-		});
-	}); 
-}); 
+	});  
 	</script>
 </body> 
 </html>

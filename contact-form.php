@@ -1232,13 +1232,13 @@ text-align:center;line-height:150%\'><b style=\'mso-bidi-font-weight:normal\'>__
   normal;mso-element:frame;mso-element-frame-hspace:9.0pt;mso-element-wrap:
   around;mso-element-anchor-vertical:paragraph;mso-element-anchor-horizontal:
   margin;mso-element-top:8.05pt;mso-height-rule:exactly\'><span Times \'><span
-  class=GramE>для<span style=\'mso-spacerun:yes\'>  </span>'.$_POST['inn'].'</span><o:p></o:p></p>
+  class=GramE>для<span style=\'mso-spacerun:yes\'>  </span>'.$_POST['name'].'</span><o:p></o:p></p>
   </span>
   <p class=MsoNormal style=\'margin-bottom:0cm;margin-bottom:.0001pt;line-height:
   normal;mso-element:frame;mso-element-frame-hspace:9.0pt;mso-element-wrap:
   around;mso-element-anchor-vertical:paragraph;mso-element-anchor-horizontal:
   margin;mso-element-top:8.05pt;mso-height-rule:exactly\'><span Times \'>Тел.
-  8(81531)35-356<o:p></o:p></p>
+  '.$_POST['phone'].'<o:p></o:p></p>
   </span>
   <p class=MsoNormal style=\'margin-bottom:0cm;margin-bottom:.0001pt;line-height:
   normal;mso-element:frame;mso-element-frame-hspace:9.0pt;mso-element-wrap:
@@ -1246,11 +1246,8 @@ text-align:center;line-height:150%\'><b style=\'mso-bidi-font-weight:normal\'>__
   margin;mso-element-top:8.05pt;mso-height-rule:exactly\'><span Times \'><span
   lang=EN-US style=\'mso-ansi-language:EN-US\'>E</span></span><span Times \'>-</span><span
   Times \'><span lang=EN-US style=\'mso-ansi-language:EN-US\'>mail</span></span><span
-  Times \'>: </span><span Times \'><a href="mailto:ekostin@phosagro.ru"><span
-  lang=EN-US style=\'font-size:9.0pt;mso-ansi-language:EN-US\'>ekostin</span><span
-  style=\'font-size:9.0pt\'>@</span><span lang=EN-US style=\'font-size:9.0pt;
-  mso-ansi-language:EN-US\'>phosagro</span><span style=\'font-size:9.0pt\'>.</span><span
-  lang=EN-US style=\'font-size:9.0pt;mso-ansi-language:EN-US\'>ru</span></a></span><span
+  Times \'>: </span><span Times \'><a href="mailto:'.$_POST['email'].'"><span
+  lang=EN-US style=\'font-size:9.0pt;mso-ansi-language:EN-US\'>'.$_POST['email'].'</span></a></span><span
   Times \'></p>
   <p class=MsoNormal style=\'margin-bottom:0cm;margin-bottom:.0001pt;line-height:
   normal;mso-element:frame;mso-element-frame-hspace:9.0pt;mso-element-wrap:

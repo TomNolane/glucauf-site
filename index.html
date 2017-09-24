@@ -796,7 +796,7 @@ function rdate($param, $time=0) {
 							<div class="shop-item-summary text-center">
 								<h2>Провод ГСП 2х0,35</h2><br> 
 									<div class="shop-item-price">
-										<span class="line-through"><?php echo ((int)str_replace(" ","",$arr["ГСП 2*0,35"]))*1.1; ?> руб.</span> <?php echo $arr["ГСП 2*0,35"]; ?> руб. (1 пог/м.)<br>
+										<span class="line-through"><?php echo ((int)str_replace(" ","",$arr["ГСП 2*0,35"]))*1.1; ?> руб.</span> <?php echo $arr["ГСП 2*0,35"]; ?> руб. (10 пог/м.)<br>
 									</div> 
 							</div>
 							<div class="shop-item-buttons text-center">
@@ -816,7 +816,7 @@ function rdate($param, $time=0) {
 							<div class="shop-item-summary text-center">
 								<h2>Провод ГСП 2х0,5</h2><br> 
 									<div class="shop-item-price">
-										<span class="line-through"><?php echo ((int)str_replace(" ","",$arr["ГСП 2*0,5"]))*1.1; ?> руб.</span> <?php echo $arr["ГСП 2*0,5"]; ?> руб. (1 пог/м.)<br>
+										<span class="line-through"><?php echo ((int)str_replace(" ","",$arr["ГСП 2*0,5"]))*1.1; ?> руб.</span> <?php echo $arr["ГСП 2*0,5"]; ?> руб. (10 пог/м.)<br>
 									</div> 
 							</div>
 							<div class="shop-item-buttons text-center">
@@ -3700,8 +3700,8 @@ function rdate($param, $time=0) {
 						<div class="row">
 							<div class="col-md-4"><img src="assets/images/3/1.PNG" alt="Провод ГСП 2х0,35" class="img-responsive"></div>
 							<div class="col-md-8"> 
-								<p>Цена: <br/>Провод ГСП 2х0,35 (1 пог/м.): <?php echo $arr["ГСП 2*0,35"]; ?> руб.<br/>
-									Провод ГСП 2х0,5 (1 пог/м.): <?php echo $arr["ГСП 2*0,5"]; ?> руб.</p>
+								<p>Цена: <br/>Провод ГСП 2х0,35 (10 пог/м.): <?php echo $arr["ГСП 2*0,35"]; ?> руб.<br/>
+									Провод ГСП 2х0,5 (10 пог/м.): <?php echo $arr["ГСП 2*0,5"]; ?> руб.</p>
 							</div>
 						</div>
 					</div>
@@ -3729,8 +3729,8 @@ function rdate($param, $time=0) {
 						<div class="row">
 							<div class="col-md-4"><img src="assets/images/3/1.PNG" alt="Провод ГСП 2х0,5" class="img-responsive"></div>
 							<div class="col-md-8"> 
-								<p>Цена: <br/>Провод ГСП 2х0,35 (1 пог/м.): <?php echo $arr["ГСП 2*0,35"]; ?> руб.<br/>
-									Провод ГСП 2х0,5 (1 пог/м.): <?php echo $arr["ГСП 2*0,5"]; ?> руб.</p>
+								<p>Цена: <br/>Провод ГСП 2х0,35 (10 пог/м.): <?php echo $arr["ГСП 2*0,35"]; ?> руб.<br/>
+									Провод ГСП 2х0,5 (10 пог/м.): <?php echo $arr["ГСП 2*0,5"]; ?> руб.</p>
 							</div>
 						</div>
 					</div>
@@ -5099,8 +5099,7 @@ function rdate($param, $time=0) {
 					var bb = d[0].getElementsByClassName('price');  
 					table[i].unshift(c[0].innerHTML,bb[0].innerHTML,val); 
 				} 
- 
-				//var form_data = "";
+  
 				for(var i =0; i < table.length; i++)
 				{
 					form_data += "&par"+i+"="+table[i][0]+";"+table[i][1]+";"+table[i][2];

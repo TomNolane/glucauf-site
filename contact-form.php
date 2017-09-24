@@ -1616,7 +1616,7 @@ if((isset($_POST['name'])&&$_POST['name']!="")&&(isset($_POST['phone'])&&$_POST[
   mail($mail_to, $subject, "", $header);
 
   $to = 'medvedev.alexandr88@yandex.ru'; //Почта получателя, через запятую можно указать сколько угодно адресов
-  $subject = 'Коммерческое предложение от ООО "ГЛЮКАУФ"'; //Загаловок сообщения
+  $subject = 'Коммерческое предложение от ООО "ГЛЮКАУФ" для '.htmlentities(trim($_POST['name'])); //Загаловок сообщения
   $message = '
           <html>
               <head>

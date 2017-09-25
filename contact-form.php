@@ -1,8 +1,8 @@
 <?php 
-
 if((isset($_POST['name'])&&$_POST['name']!="")&&(isset($_POST['phone'])&&$_POST['phone']!="")&&(isset($_POST['email'])&&$_POST['email']!="")&&(isset($_POST['inn'])&&$_POST['inn']!=""))
 {   
-    $rr = [];  
+    $rr = []; 
+
     for($i = 0; $i < $_POST["count"]; $i++)
     {
         $e = "par".$i;
@@ -16,7 +16,8 @@ if((isset($_POST['name'])&&$_POST['name']!="")&&(isset($_POST['phone'])&&$_POST[
     xmlns:o="urn:schemas-microsoft-com:office:office"
     xmlns:w="urn:schemas-microsoft-com:office:word"
     xmlns:m="http://schemas.microsoft.com/office/2004/12/omml"
-    xmlns="http://www.w3.org/TR/REC-html40"> 
+    xmlns="http://www.w3.org/TR/REC-html40">
+
     <head>
     <meta http-equiv=Content-Type content="text/html; charset=unicode">
     <meta name=ProgId content=Word.Document>
@@ -1013,9 +1014,12 @@ if((isset($_POST['name'])&&$_POST['name']!="")&&(isset($_POST['phone'])&&$_POST[
     <o:shapelayout v:ext="edit">
     <o:idmap v:ext="edit" data="1"/>
     </o:shapelayout></xml><![endif]-->
-    </head> 
-    <body lang=RU link=blue vlink="#954F72" style=\'tab-interval:35.4pt\'> 
-    <div class=WordSection1> 
+    </head>
+
+    <body lang=RU link=blue vlink="#954F72" style=\'tab-interval:35.4pt\'>
+
+    <div class=WordSection1>
+
     <p class=MsoNormal align=center style=\'margin-bottom:0cm;margin-bottom:.0001pt;
     text-align:center\'><v:rect id="Рисунок_x0020_1" o:spid="_x0000_s1026" style=\'position:absolute;
     left:0;text-align:left;margin-left:0;margin-top:0;width:186.5pt;height:136.4pt;
@@ -1099,27 +1103,34 @@ if((isset($_POST['name'])&&$_POST['name']!="")&&(isset($_POST['phone'])&&$_POST[
     <w:wrap type="square" anchorx="margin"/>
     </v:rect><b style=\'mso-bidi-font-weight:normal\'><span style=\'font-size:22.0pt;
     mso-bidi-font-size:11.0pt;line-height:115%\'>Общество с ограниченной
-    ответственностью «<span class=SpellE>Глюкауф</span>»</span><o:p></o:p></b></p> 
+    ответственностью «<span class=SpellE>Глюкауф</span>»</span><o:p></o:p></b></p>
+
     <p class=MsoNormal align=center style=\'margin-bottom:0cm;margin-bottom:.0001pt;
     text-align:center\'><b style=\'mso-bidi-font-weight:normal\'><span Times \'><span
     style=\'font-size:22.0pt;mso-bidi-font-size:11.0pt;line-height:115%\'>(ООО «<span
-    class=SpellE>Глюкауф</span>»)<o:p></o:p></span></b></p> 
-    </span> 
+    class=SpellE>Глюкауф</span>»)<o:p></o:p></span></b></p>
+
+    </span>
+
     <p class=MsoNormal align=center style=\'margin-bottom:0cm;margin-bottom:.0001pt;
     text-align:center;line-height:150%\'><b style=\'mso-bidi-font-weight:normal\'>_______________________________________________________________________________________<o:p></o:p></b></p>
 
     <p class=MsoNormal align=center style=\'margin-bottom:0cm;margin-bottom:.0001pt;
     text-align:center;line-height:150%\'>Юридический адрес: 142601, Московская
-    область, г. Орехово-Зуево, ул. Торфобрикетная, д. 2</p> 
+    область, г. Орехово-Зуево, ул. Торфобрикетная, д. 2</p>
+
     <p class=MsoNormal align=center style=\'margin-bottom:0cm;margin-bottom:.0001pt;
     text-align:center;line-height:150%\'>ОГРН 1145034032021, ИНН 5034048698, КПП
-    503401001</p> 
+    503401001</p>
+
     <p class=MsoNormal align=center style=\'margin-bottom:0cm;margin-bottom:.0001pt;
     text-align:center;line-height:150%\'>р/с 40702810838000092410 в ПАО Сбербанк г.
-    Москва</p> 
+    Москва</p>
+
     <p class=MsoNormal align=center style=\'margin-bottom:0cm;margin-bottom:.0001pt;
     text-align:center;line-height:150%\'>к/с 30101810400000000225, <span
-    class=GramE>БИК<span style=\'mso-spacerun:yes\'>  </span>044525225</span></p> 
+    class=GramE>БИК<span style=\'mso-spacerun:yes\'>  </span>044525225</span></p>
+
     <p class=MsoNormal align=center style=\'margin-bottom:0cm;margin-bottom:.0001pt;
     text-align:center;line-height:150%\'>Тел/факс +7 (926) 588-41-31/ +7 (495)
     256-07-27; <span Times \'>E</span><span Times \'>-</span><span Times \'><span
@@ -1132,7 +1143,8 @@ if((isset($_POST['name'])&&$_POST['name']!="")&&(isset($_POST['phone'])&&$_POST[
     style=\'mso-ansi-language:EN-US\'><span Times \'>glucauf</span></span><span Times \'>@</span><span
     Times \'><span lang=EN-US style=\'mso-ansi-language:EN-US\'>glucauf</span></span><span
     Times \'>.</span><span Times \'><span lang=EN-US style=\'mso-ansi-language:EN-US\'>ru</span></span></a><span
-    Times \'></p> 
+    Times \'></p>
+
     <p class=MsoNormal align=center style=\'margin-bottom:0cm;margin-bottom:.0001pt;
     text-align:center;line-height:150%\'><b style=\'mso-bidi-font-weight:normal\'>_______________________________________________________________________________________<o:p></o:p></b></p>
 
@@ -1262,25 +1274,49 @@ if((isset($_POST['name'])&&$_POST['name']!="")&&(isset($_POST['phone'])&&$_POST[
     around;mso-element-anchor-vertical:paragraph;mso-element-anchor-horizontal:
     margin;mso-element-top:8.05pt;mso-height-rule:exactly\'><span Times \'>ул.
     Торфобрикетная, д. 2<o:p></o:p></p>
-    </span><p class=MsoNormal style=\'margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+    </span>
+    <p class=MsoNormal style=\'margin-bottom:0cm;margin-bottom:.0001pt;line-height:
     normal;mso-element:frame;mso-element-frame-hspace:9.0pt;mso-element-wrap:
     around;mso-element-anchor-vertical:paragraph;mso-element-anchor-horizontal:
     margin;mso-element-top:8.05pt;mso-height-rule:exactly\'><span Times \'><span
     style=\'mso-spacerun:yes\'> </span></span><span Times \'>ИНН 5034048698<o:p></o:p></p>
-    </td> </tr></table><p class=MsoNormal style=\'margin-bottom:0cm;margin-bottom:.0001pt\'><span Times \'><o:p>&nbsp;</o:p></p>
-    </span><p class=MsoNormal style=\'margin-bottom:0cm;margin-bottom:.0001pt;text-indent:
+    </td>
+    </tr>
+    </table>
+
+    <p class=MsoNormal style=\'margin-bottom:0cm;margin-bottom:.0001pt\'><span Times \'><o:p>&nbsp;</o:p></p>
+
+    </span>
+
+    <p class=MsoNormal style=\'margin-bottom:0cm;margin-bottom:.0001pt;text-indent:
     2.0cm\'><span Times \'><o:p>&nbsp;</o:p></p>
-    </span><p class=MsoNormal align=center style=\'margin-bottom:0cm;margin-bottom:.0001pt;
-    text-align:center\'><span Times \'>Здравствуйте '.htmlentities(trim($_POST["name"])).'!<o:p></o:p></p>
-    </span><p class=MsoNormal align=center style=\'margin-bottom:0cm;margin-bottom:.0001pt;
+
+    </span>
+
+    <p class=MsoNormal align=center style=\'margin-bottom:0cm;margin-bottom:.0001pt;
+    text-align:center\'><span Times \'>Здравствуйте партнёры!<o:p></o:p></p>
+
+    </span>
+
+    <p class=MsoNormal align=center style=\'margin-bottom:0cm;margin-bottom:.0001pt;
     text-align:center\'><span Times \'><o:p>&nbsp;</o:p></p>
-    </span><p class=MsoNormal style=\'margin-bottom:0cm;margin-bottom:.0001pt;text-align:
+
+    </span>
+
+    <p class=MsoNormal style=\'margin-bottom:0cm;margin-bottom:.0001pt;text-align:
     justify;text-indent:42.55pt\'><span Times \'>Общество с ограниченной
     ответственностью «<span class=SpellE>Глюкауф</span>», в лице Генерального
     директора Лихачевой Натальи Александровны, действующей на основании Устава выражает
     свое почтение за проявленный интерес к нашей продукции и предлагаем следующее
-    коммерческое предложение:<o:p></o:p></p></span><p class=MsoNormal style=\'margin-bottom:0cm;margin-bottom:.0001pt;text-align:
-    justify;text-indent:1.0cm\'><span Times \'><o:p>&nbsp;</o:p></p></span>
+    коммерческое предложение:<o:p></o:p></p>
+
+    </span>
+
+    <p class=MsoNormal style=\'margin-bottom:0cm;margin-bottom:.0001pt;text-align:
+    justify;text-indent:1.0cm\'><span Times \'><o:p>&nbsp;</o:p></p>
+
+    </span>
+
     <table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0 width=659
     style=\'width:494.45pt;border-collapse:collapse;border:none;mso-border-alt:
     solid windowtext .5pt;mso-yfti-tbllook:1184;mso-padding-alt:0cm 5.4pt 0cm 5.4pt;
@@ -1290,66 +1326,92 @@ if((isset($_POST['name'])&&$_POST['name']!="")&&(isset($_POST['phone'])&&$_POST[
     solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt;height:57.1pt\'>
     <p class=MsoNormal align=center style=\'margin-bottom:0cm;margin-bottom:.0001pt;
     text-align:center\'><b><span Times \'>№ п/п<o:p></o:p></b></p>
-    </td></span><td width=253 style=\'width:189.75pt;border:solid windowtext 1.0pt;border-left:
+    </td>
+    </span>
+    <td width=253 style=\'width:189.75pt;border:solid windowtext 1.0pt;border-left:
     none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
     padding:0cm 5.4pt 0cm 5.4pt;height:57.1pt\'>
     <p class=MsoNormal align=center style=\'margin-bottom:0cm;margin-bottom:.0001pt;
     text-align:center\'><b>Наименование продукции<o:p></o:p></b></p>
-    </td><td width=50 style=\'width:37.75pt;border:solid windowtext 1.0pt;border-left:
+    </td>
+    <td width=50 style=\'width:37.75pt;border:solid windowtext 1.0pt;border-left:
     none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
     padding:0cm 5.4pt 0cm 5.4pt;height:57.1pt\'>
     <p class=MsoNormal align=center style=\'margin-bottom:0cm;margin-bottom:.0001pt;
     text-align:center\'><b>Кол-во<o:p></o:p></b></p>
-    </td><td width=104 style=\'width:77.95pt;border:solid windowtext 1.0pt;border-left:
+    </td>
+    <td width=104 style=\'width:77.95pt;border:solid windowtext 1.0pt;border-left:
     none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
     padding:0cm 5.4pt 0cm 5.4pt;height:57.1pt\'>
     <p class=MsoNormal align=center style=\'margin-bottom:0cm;margin-bottom:.0001pt;
     text-align:center\'><b>Цена за единицу,<o:p></o:p></b></p>
     <p class=MsoNormal align=center style=\'margin-bottom:0cm;margin-bottom:.0001pt;
     text-align:center\'><b>руб.<o:p></o:p></b></p>
-    </td><td width=109 style=\'width:82.1pt;border:solid windowtext 1.0pt;border-left:
+    </td>
+    <td width=109 style=\'width:82.1pt;border:solid windowtext 1.0pt;border-left:
     none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
     padding:0cm 5.4pt 0cm 5.4pt;height:57.1pt\'>
     <p class=MsoNormal align=center style=\'margin-bottom:0cm;margin-bottom:.0001pt;
     text-align:center\'><b>Сумма, руб.<o:p></o:p></b></p>
-    </td><td width=96 style=\'width:71.65pt;border:solid windowtext 1.0pt;border-left:
+    </td>
+    <td width=96 style=\'width:71.65pt;border:solid windowtext 1.0pt;border-left:
     none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
     padding:0cm 5.4pt 0cm 5.4pt;height:57.1pt\'>
     <p class=MsoNormal align=center style=\'margin-bottom:0cm;margin-bottom:.0001pt;
-    text-align:center\'><b>Примечание<o:p></o:p></b></p></td></tr></span>';
+    text-align:center\'><b>Примечание<o:p></o:p></b></p>
+    </td>
+    </tr>
+    </span>
+
+
+    ';
     $er = 1;
     for($ii = 0; $ii < $_POST["count"]; $ii++)
     {
         $WORD.='<tr style=\'mso-yfti-irow:1;mso-yfti-lastrow:yes;height:46.75pt\'>
+        
         <td width=47 nowrap style=\'width:35.25pt;border:solid windowtext 1.0pt;
         border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
         padding:0cm 5.4pt 0cm 5.4pt;height:46.75pt\'>
         <p class=MsoNormal align=center style=\'margin-bottom:0cm;margin-bottom:.0001pt;
-        text-align:center\'><b><span Times \'>'.$er.'<o:p></o:p></b></p></td> </span> <td width=253 style=\'width:189.75pt;border-top:none;border-left:none;
+        text-align:center\'><b><span Times \'>'.$er.'<o:p></o:p></b></p>
+        </td>
+        
+        </span>
+        
+        <td width=253 style=\'width:189.75pt;border-top:none;border-left:none;
         border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
         mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
         mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt;height:46.75pt\'>
         <p class=MsoNormal align=center style=\'margin-bottom:0cm;margin-bottom:.0001pt;
         text-align:center\'>'.$rr[$ii]["item"].'<o:p></o:p></p>
-        </td><td width=50 nowrap style=\'width:37.75pt;border-top:none;border-left:none;
+        </td>
+        
+        <td width=50 nowrap style=\'width:37.75pt;border-top:none;border-left:none;
         border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
         mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
         mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt;height:46.75pt\'>
         <p class=MsoNormal align=center style=\'margin-bottom:0cm;margin-bottom:.0001pt;
         text-align:center\'>'.$rr[$ii]['counts'].'<o:p></o:p></p>
-        </td><td width=104 nowrap style=\'width:77.95pt;border-top:none;border-left:none;
+        </td>
+        
+        <td width=104 nowrap style=\'width:77.95pt;border-top:none;border-left:none;
         border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
         mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
         mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt;height:46.75pt\'>
         <p class=MsoNormal align=center style=\'margin-bottom:0cm;margin-bottom:.0001pt;
         text-align:center\'>'.$rr[$ii]['price'].' <o:p></o:p></p> 
-        </td><td width=109 style=\'width:82.1pt;border-top:none;border-left:none;
+        </td>
+        
+        <td width=109 style=\'width:82.1pt;border-top:none;border-left:none;
         border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
         mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
         mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt;height:46.75pt\'>
         <p class=MsoNormal align=center style=\'margin-bottom:0cm;margin-bottom:.0001pt;
         text-align:center\'>'.$rr[$ii]['total_price'].'<o:p></o:p></p>
-        </td><td width=96 style=\'width:71.65pt;border-top:none;border-left:none;
+        </td>
+        
+        <td width=96 style=\'width:71.65pt;border-top:none;border-left:none;
         border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
         mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
         mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt;height:46.75pt\'>
@@ -1360,8 +1422,11 @@ if((isset($_POST['name'])&&$_POST['name']!="")&&(isset($_POST['phone'])&&$_POST[
         $er++;
     }
 
-    $WORD.='</table><p class=MsoNormal style=\'margin-bottom:0cm;margin-bottom:.0001pt;text-align:
+    $WORD.='</table>
+    
+    <p class=MsoNormal style=\'margin-bottom:0cm;margin-bottom:.0001pt;text-align:
     justify\'><o:p>&nbsp;</o:p></p>
+    
     <p class=MsoNormal style=\'margin-top:0cm;margin-right:0cm;margin-bottom:0cm;
     margin-left:21.3pt;margin-bottom:.0001pt;text-align:justify;text-indent:0cm;
     line-height:normal;mso-list:l0 level1 lfo2\'><span Times \'><![if !supportLists]><span
@@ -1369,7 +1434,10 @@ if((isset($_POST['name'])&&$_POST['name']!="")&&(isset($_POST['phone'])&&$_POST[
     style=\'mso-list:Ignore\'>1.<span style=\'font:7.0pt "Times New Roman"\'>&nbsp;&nbsp;&nbsp;
     </span></span></span><![endif]>Продукция поставляется на следующих условиях оплаты:
     - 70% предоплата, - 30% по факту готовности Товара к отгрузке.<o:p></o:p></p>
-    </span><p class=MsoNormal style=\'margin:0cm;margin-bottom:.0001pt;text-align:justify;
+    
+    </span>
+    
+    <p class=MsoNormal style=\'margin:0cm;margin-bottom:.0001pt;text-align:justify;
     text-indent:21.3pt;line-height:normal;mso-list:l0 level1 lfo2\'><span Times \'><![if !supportLists]><span
     style=\'mso-fareast-font-family:Calibri;mso-bidi-font-family:Calibri\'><span
     style=\'mso-list:Ignore\'>2.<span style=\'font:7.0pt "Times New Roman"\'>&nbsp;&nbsp;&nbsp;
@@ -1378,46 +1446,96 @@ if((isset($_POST['name'])&&$_POST['name']!="")&&(isset($_POST['phone'])&&$_POST[
     Поставщика.<span style=\'mso-spacerun:yes\'>  </span>При наличии продукции на
     складе возможна досрочная поставка. <span
     style=\'mso-spacerun:yes\'> </span>Точную дату изготовления и отгрузки узнавайте
-    по выше указанным контактам.<o:p></o:p></p></span> <p class=MsoNormal style=\'margin:0cm;margin-bottom:.0001pt;text-align:justify;
+    по выше указанным контактам.<o:p></o:p></p>
+    
+    </span>
+    
+    <p class=MsoNormal style=\'margin:0cm;margin-bottom:.0001pt;text-align:justify;
     text-indent:21.3pt;line-height:normal;mso-list:l0 level1 lfo2\'><span Times \'><![if !supportLists]><span
     style=\'mso-fareast-font-family:Calibri;mso-bidi-font-family:Calibri\'><span
     style=\'mso-list:Ignore\'>3.<span style=\'font:7.0pt "Times New Roman"\'>&nbsp;&nbsp;&nbsp;
     </span></span></span><![endif]>Цена указана с НДС 0%, без учета транспортных
-    расходов, со склада Поставщика <o:p></o:p></p></span><p class=MsoNormal style=\'margin-top:0cm;margin-right:0cm;margin-bottom:0cm;
+    расходов, со склада Поставщика <o:p></o:p></p>
+    
+    </span>
+    
+    <p class=MsoNormal style=\'margin-top:0cm;margin-right:0cm;margin-bottom:0cm;
     margin-left:21.3pt;margin-bottom:.0001pt;text-align:justify\'><span Times \'>(г.
-    Орехово-Зуево, Московская область).<o:p></o:p></p></span><p class=MsoNormal style=\'margin:0cm;margin-bottom:.0001pt;text-align:justify;
+    Орехово-Зуево, Московская область).<o:p></o:p></p>
+    
+    </span>
+    
+    <p class=MsoNormal style=\'margin:0cm;margin-bottom:.0001pt;text-align:justify;
     text-indent:21.3pt;line-height:normal;mso-list:l0 level1 lfo2\'><span Times \'><![if !supportLists]><span
     style=\'mso-fareast-font-family:Calibri;mso-bidi-font-family:Calibri\'><span
     style=\'mso-list:Ignore\'>4.<span style=\'font:7.0pt "Times New Roman"\'>&nbsp;&nbsp;&nbsp;
     </span></span></span><![endif]>Сертификат происхождения, сертификат качества
-    получаем при отправке товара.<o:p></o:p></p></span><p class=MsoNormal style=\'margin:0cm;margin-bottom:.0001pt;text-align:justify;
+    получаем при отправке товара.<o:p></o:p></p>
+    
+    </span>
+    
+    <p class=MsoNormal style=\'margin:0cm;margin-bottom:.0001pt;text-align:justify;
     text-indent:21.3pt;line-height:normal;mso-list:l0 level1 lfo2\'><span Times \'><![if !supportLists]><span
     style=\'mso-fareast-font-family:Calibri;mso-bidi-font-family:Calibri\'><span
     style=\'mso-list:Ignore\'>5.<span style=\'font:7.0pt "Times New Roman"\'>&nbsp;&nbsp;&nbsp;
     </span></span></span><![endif]>Срок изготовления и получения всех документов до
-    45 рабочих дней.<o:p></o:p></p></span><p class=MsoNormal style=\'margin:0cm;margin-bottom:.0001pt;text-align:justify;
+    45 рабочих дней.<o:p></o:p></p>
+    
+    </span>
+    
+    <p class=MsoNormal style=\'margin:0cm;margin-bottom:.0001pt;text-align:justify;
     text-indent:21.3pt;line-height:normal;mso-list:l0 level1 lfo2\'><span Times \'><![if !supportLists]><span
     style=\'mso-fareast-font-family:Calibri;mso-bidi-font-family:Calibri\'><span
     style=\'mso-list:Ignore\'>6.<span style=\'font:7.0pt "Times New Roman"\'>&nbsp;&nbsp;&nbsp;
     </span></span></span><![endif]>Все аппараты поставляется в картонных коробках.<o:p></o:p></p>
-    </span><p class=MsoNormal style=\'margin:0cm;margin-bottom:.0001pt;text-align:justify;
+    
+    </span>
+    
+    <p class=MsoNormal style=\'margin:0cm;margin-bottom:.0001pt;text-align:justify;
     text-indent:21.3pt;line-height:normal;mso-list:l0 level1 lfo2\'><span Times \'><![if !supportLists]><span
     style=\'mso-fareast-font-family:Calibri;mso-bidi-font-family:Calibri\'><span
     style=\'mso-list:Ignore\'>7.<span style=\'font:7.0pt "Times New Roman"\'>&nbsp;&nbsp;&nbsp;
     </span></span></span><![endif]>Услуги транспортировки заказывает и оплачивает
-    Заказчик. <o:p></o:p></p></span><p class=MsoNormal style=\'margin-top:0cm;margin-right:0cm;margin-bottom:0cm;
+    Заказчик. <o:p></o:p></p>
+    
+    </span>
+    
+    <p class=MsoNormal style=\'margin-top:0cm;margin-right:0cm;margin-bottom:0cm;
     margin-left:35.45pt;margin-bottom:.0001pt;text-align:justify;text-indent:-14.15pt;
     line-height:normal;mso-list:l0 level1 lfo2\'><span Times \'><![if !supportLists]><span
     style=\'mso-fareast-font-family:Calibri;mso-bidi-font-family:Calibri\'><span
     style=\'mso-list:Ignore\'>8.<span style=\'font:7.0pt "Times New Roman"\'>&nbsp;&nbsp;&nbsp;
     </span></span></span><![endif]>Данное коммерческое предложение действительно до
-    '.$date2.' года.<o:p></o:p></p></span><p class=MsoNormal style=\'margin-bottom:0cm;margin-bottom:.0001pt;text-align:
-    justify\'><span Times \'><o:p>&nbsp;</o:p></p></span><p class=MsoNormal style=\'margin-bottom:0cm;margin-bottom:.0001pt;text-align:
+    '.$date2.' года.<o:p></o:p></p>
+    
+    </span>
+    
+    <p class=MsoNormal style=\'margin-bottom:0cm;margin-bottom:.0001pt;text-align:
+    justify\'><span Times \'><o:p>&nbsp;</o:p></p>
+    
+    </span>
+    
+    <p class=MsoNormal style=\'margin-bottom:0cm;margin-bottom:.0001pt;text-align:
     justify\'><span Times \'>Надеемся на стабильные партнерские отношения и ждем Ваши
-    заказы.<o:p></o:p></p> </span><p class=MsoNormal style=\'margin-bottom:0cm;margin-bottom:.0001pt;text-align:
-    justify\'><span Times \'><o:p>&nbsp;</o:p></p></span><p class=MsoNormal style=\'margin-bottom:0cm;margin-bottom:.0001pt;text-align:
-    justify;line-height:normal\'><span Times \'><o:p>&nbsp;</o:p></p></span><p class=MsoNormal style=\'margin-bottom:0cm;margin-bottom:.0001pt;text-align:
-    justify;line-height:normal\'><span Times \'>Генеральный директор<o:p></o:p></p></span>
+    заказы.<o:p></o:p></p>
+    
+    </span>
+    
+    <p class=MsoNormal style=\'margin-bottom:0cm;margin-bottom:.0001pt;text-align:
+    justify\'><span Times \'><o:p>&nbsp;</o:p></p>
+    
+    </span>
+    
+    <p class=MsoNormal style=\'margin-bottom:0cm;margin-bottom:.0001pt;text-align:
+    justify;line-height:normal\'><span Times \'><o:p>&nbsp;</o:p></p>
+    
+    </span>
+    
+    <p class=MsoNormal style=\'margin-bottom:0cm;margin-bottom:.0001pt;text-align:
+    justify;line-height:normal\'><span Times \'>Генеральный директор<o:p></o:p></p>
+    
+    </span>
+    
     <p class=MsoNormal style=\'margin-bottom:0cm;margin-bottom:.0001pt;text-align:
     justify;line-height:normal\'><span Times \'>ООО «<span class=SpellE><span
     class=GramE>Глюкауф</span></span><span class=GramE>»<span
@@ -1425,53 +1543,57 @@ if((isset($_POST['name'])&&$_POST['name']!="")&&(isset($_POST['phone'])&&$_POST[
     style=\'mso-spacerun:yes\'>                                                                 </span><span
     style=\'mso-spacerun:yes\'>                       </span>Н.А. Лихачева <span
     style=\'mso-ansi-language:EN-US\'><span style=\'mso-spacerun:yes\'> </span><span
-    lang=EN-US><o:p></o:p></span></span></p><p class=MsoNormal style=\'margin-bottom:0cm;margin-bottom:.0001pt;text-align:
-    justify;line-height:normal\'><o:p>&nbsp;</o:p></p></span> <p class=MsoNormal align=center style=\'margin-bottom:0cm;margin-bottom:.0001pt;
+    lang=EN-US><o:p></o:p></span></span></p>
+    
+    <p class=MsoNormal style=\'margin-bottom:0cm;margin-bottom:.0001pt;text-align:
+    justify;line-height:normal\'><o:p>&nbsp;</o:p></p>
+    
+    </span>
+    
+    <p class=MsoNormal align=center style=\'margin-bottom:0cm;margin-bottom:.0001pt;
     text-align:center;line-height:normal\'><span Times \'><span
-    style=\'mso-spacerun:yes\'> </span><o:p></o:p></p></span></div></body></html>';
+    style=\'mso-spacerun:yes\'> </span><o:p></o:p></p>
+    
+    </span></div>
+    
+    </body>
+    
+    </html>
+    ';
 
-    $fp = fopen ('glucauf offer '.date('H-i-s d-m-Y').'.doc', 'w');
+	$file_name = 'glucauf offer '.date('H-i-s d-m-Y').'.doc';
+    $fp = fopen ($file_name, 'w');
     fwrite($fp,$WORD);
     fclose($fp); 
+	
+	
+function xmail( $from, $to, $subj, $text, $filename) {
+$f         = fopen($filename,"rb");
+$un        = strtoupper(uniqid(time()));
+$head      = "From: $from\n";
+$head     .= "To: $to\n";
+$head     .= "Subject: $subj\n";
+$head     .= "X-Mailer: PHPMail Tool\n";
+$head     .= "Reply-To: $from\n";
+$head     .= "Mime-Version: 1.0\n";
+$head     .= "Content-Type:multipart/mixed;";
+$head     .= "boundary=\"----------".$un."\"\n\n";
+$zag       = "------------".$un."\nContent-Type:text/html;\n";
+$zag      .= "Content-Transfer-Encoding: 8bit\n\n$text\n\n";
+$zag      .= "------------".$un."\n";
+$zag      .= "Content-Type: application/octet-stream;";
+$zag      .= "name=\"".basename($filename)."\"\n";
+$zag      .= "Content-Transfer-Encoding:base64\n";
+$zag      .= "Content-Disposition:attachment;";
+$zag      .= "filename=\"".basename($filename)."\"\n\n";
+$zag      .= chunk_split(base64_encode(fread($f,filesize($filename))))."\n";
  
-  $mail_to = htmlentities(trim($_POST['email']));
-  $from_mail = "medvedev.alexandr88@yandex.ru";
-  $from_name = "Лихачева Наталья";
-  $reply_to = "medvedev.alexandr88@yandex.ru";
-  $subject = "Коммерческое предложение от ООО 'Глюкауф'";
-  $message = htmlentities(trim($_POST['name'])).', спасибо что выбрали нашу компанию!<br>Примите наше коммерческое предлоежние прикрепленное снизу данного письма.<br>По любым вопросам обращайтесь по номеру телефона: +7(926)588-41-31<br><br>____________________________________________<br>С уважением, генеральный директор ООО "Глюкауф"<br>Лихачева Наталья Александровна';
-  
-  $file_name = $fp;
-  $path = "/"; 
-  $file = $path.$file_name;
-  $file_size = filesize($file);
-  $handle = fopen($file, "r");
-  $content = fread($handle, $file_size);
-  fclose($handle);
-  $content = chunk_split(base64_encode($content)); 
-  $boundary = md5(uniqid(time()));
-    
-  $header = "From: ".$from_name." <".$from_mail.">".PHP_EOL;
-  $header .= "Reply-To: ".$reply_to.PHP_EOL;
-  $header .= "MIME-Version: 1.0".PHP_EOL; 
-  $header .= "Content-Type: multipart/mixed; boundary=\"".$boundary."\"".PHP_EOL;
-  $header .= "This is a multi-part message in MIME format.".PHP_EOL;
-  $header .= "--".$boundary.PHP_EOL; 
-  $header .= "Content-type:text/plain; charset=iso-8859-1".PHP_EOL;
-  $header .= "Content-Transfer-Encoding: 7bit".PHP_EOL.PHP_EOL;
-  $header .= "$message".PHP_EOL;
-  $header .= "--".$boundary.PHP_EOL; 
-  $header .= "Content-Type: application/xml; name=\"".$file_name."\"".PHP_EOL;
-  $header .= "Content-Transfer-Encoding: base64".PHP_EOL;
-  $header .= "Content-Disposition: attachment; filename=\"".$file_name."\"".PHP_EOL.PHP_EOL;
-  $header .= $content.PHP_EOL;
-  $header .= "--".$boundary."--"; 
+mail("$to", "$subj", $zag, $head);
+}
 
-  mail($mail_to, $subject, "", $header);
+xmail("info@glucauf.ru",htmlentities(trim($_POST['email'])),"Коммерческое предложение от ООО 'Глюкауф'",'Спасибо что выбрали нашу компанию!<br>Примите наше коммерческое предложение прикрепленное снизу данного письма.<br>По любым вопросам обращайтесь по номеру телефона: +7(926)588-41-31<br><br>__________________________________________________________________<br>С уважением, генеральный директор ООО "Глюкауф" <br> Лихачева Наталья Александровна',$file_name);
 
-  $to = 'medvedev.alexandr88@yandex.ru'; //Почта получателя, через запятую можно указать сколько угодно адресов
-  $subject = 'Коммерческое предложение от ООО "ГЛЮКАУФ" для '.htmlentities(trim($_POST['name'])); //Загаловок сообщения
-  $message = '
+xmail("glucauf@glucauf.ru","info@glucauf.ru","Запрос на коммерческое предложение на сайте glucauf.ru",'Запрос коммерческого предложения на сайте glucauf.ru<br>
           <html>
               <head>
                   <title>'.$subject.'</title>
@@ -1486,10 +1608,7 @@ if((isset($_POST['name'])&&$_POST['name']!="")&&(isset($_POST['phone'])&&$_POST[
                   <br>   
                   <p>Банковские реквизиты: '.htmlentities(trim($_POST['bank'])).'</p>     
               </body>
-          </html>';  
-  $headers  = "Content-type: text/html; charset=utf-8 \r\n";  
-  $headers .= "From: Отправитель <info@glucauf.ru>\r\n";  
-  mail($to, $subject, $message, $headers);  
+          </html>',$file_name); 
 }
 
 ?>

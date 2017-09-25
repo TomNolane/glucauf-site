@@ -37,6 +37,8 @@ function rdate($param, $time=0) {
 	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700" rel="stylesheet">
 	<link rel="stylesheet" href="css/reset.css"> 
 	<link rel="stylesheet" href="css/style.css">
+	
+	<script src='https://www.google.com/recaptcha/api.js'></script>
 </head> 
 <body class="smoothscroll enable-animation"> 
 	<div id="up"></div> 
@@ -1271,6 +1273,7 @@ function rdate($param, $time=0) {
 								<div class="col-lg-12 text-center">
 									<div id="success"></div>
 									<button type="submit" class="btn btn-primary">Отправить</button>
+									<div class="g-recaptcha" data-sitekey="6LeU7jEUAAAAALkS5UssHopaALmkhVgnufSL27dm"></div>
 								</div>
 							</div>
 						</form>
@@ -4495,7 +4498,7 @@ function rdate($param, $time=0) {
 															<div class="clearfix"></div>
 															<div class="col-lg-12 text-center">
 																<div id="success"></div>
-																<button id="special_12" type="submit" class="btn btn-primary">Отправить</button>
+																<button id="special_12" type="submit" class="btn btn-primary">Отправить</button> 
 															</div>
 														</div>
 													</form>
@@ -5127,8 +5130,9 @@ function rdate($param, $time=0) {
 				var name =  $("#name").val();
 				var phone =  $("#phone").val();
 				var email =  $("#email").val(); 
-				var text =  $("#message").val();			
-				var form_data =  "name="+name+"&phone="+phone+"&email="+email+"&message="+text;  
+				var text =  $("#message").val();	
+				var token = $("#g-recaptcha-response").val();			
+				var form_data =  "name="+name+"&phone="+phone+"&email="+email+"&message="+text+"&g-recaptcha-response="+token;  
 				$.ajax({
 				type: "POST",  
 				url: "contact-form2.php", 

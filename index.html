@@ -254,19 +254,19 @@ function rdate($param, $time=0) {
 						<h3>Срок выполнения заказа:</h3>
 						<p>от 10 дней</p>
 					</div> 
-				</div>
-				<div id="show"></div>
+				</div> 
 			</div>
 		</section>
 		<!-- /INFO BAR --> 
 		<!-- FEATURED -->
 		<section>
-			<div class="container">
-				<div class="row">
-					<h1 class="text-center size-24">Горноспасательное и противопожарное оборудование</h1>
-					<div class="row">   
+			<div class="container" >
+				<div class="row" style="margin-top: -120px;" >
+					<h1 class="text-center size-24" id="show" style="margin-bottom: -10px;" >Горноспасательное и противопожарное оборудование</h1> 
+					<div class="row" >   
+					<div style="margin-top: 20px;" ></div>
 					<!-- --------------------------- РЕСПИРАТОРЫ ----------------------------- -->
-					<h2 class="text-center owl-featured noborder">Респираторы</h2>
+					<h2 class="text-center owl-featured noborder" >Респираторы</h2>
 					<div class="owl-carousel featured nomargin owl-padding-10" data-plugin-options='{"loop":true,"singleItem": false, "items": "4", "stopOnHover":false, "autoPlay":4000, "autoHeight": false, "navigation": true, "pagination": false}'>
 						<!-- item -->
 						<div class="shop-item nomargin"> 
@@ -1239,7 +1239,7 @@ function rdate($param, $time=0) {
 		<!-- BRANDS --> 
 		<section id="contact">
 			<div class="container">
-				<div class="row">
+				<div class="row" style="margin-top: -40px;">
 					<div class="col-lg-12 text-center">
 						<h2 class="section-heading" style="color: black;">Свяжитесь с нами</h2>
 						<h3 class="section-subheading" style="color: black;">напишите нам письмо!</h3> 
@@ -1251,29 +1251,31 @@ function rdate($param, $time=0) {
 							<div class="row">
 								<div class="col-md-6">
 									<div class="form-group">
-										<input type="text" class="form-control" placeholder="Ваше имя" id="name" required="required" data-validation-required-message="Пожалуйста, введите ваше имя!">
+										<input type="text" class="form-control" placeholder="Ваше имя*" id="name" required="required" data-validation-required-message="Пожалуйста, введите ваше имя!">
 										<p class="help-block text-danger"></p>
 									</div>
 									<div class="form-group">
-										<input type="email" class="form-control" placeholder="Ваш e-mail адрес" id="email" required="required" data-validation-required-message="Пожалуйста, введите ваш e-mail адрес!">
+										<input type="email" class="form-control" placeholder="Ваш e-mail адрес*" id="email" required="required" data-validation-required-message="Пожалуйста, введите ваш e-mail адрес!">
 										<p class="help-block text-danger"></p>
 									</div>
 									<div class="form-group">
-										<input type="tel" class="form-control" placeholder="Ваш номер телефона" id="phone" required="required" data-validation-required-message="Пожалуйста, введите номер вашего телефона!">
+										<input type="tel" class="form-control" placeholder="Ваш номер телефона*" id="phone" required="required" data-validation-required-message="Пожалуйста, введите номер вашего телефона!">
 										<p class="help-block text-danger"></p>
 									</div>
 								</div>
 								<div class="col-md-6">
 									<div class="form-group">
-										<textarea class="form-control" placeholder="Текст обращения" id="message" required="" data-validation-required-message="Пожалуйста, введите текст сообщения!"></textarea>
-										<p class="help-block text-danger"></p>
+										<textarea class="form-control" placeholder="Текст обращения*" rows="1" id="message" required="" data-validation-required-message="Пожалуйста, введите текст сообщения!"></textarea>
+										<p class="help-block text-danger"></p> 
 									</div>
-								</div>
+									<div class="g-recaptcha" data-sitekey="6LeU7jEUAAAAALkS5UssHopaALmkhVgnufSL27dm"></div>
+								</div> 
 								<div class="clearfix"></div>
 								<div class="col-lg-12 text-center">
+									<p>* - все поля обязательны к заполнению</p>
 									<div id="success"></div>
-									<button type="submit" class="btn btn-primary">Отправить</button>
-									<div class="g-recaptcha" data-sitekey="6LeU7jEUAAAAALkS5UssHopaALmkhVgnufSL27dm"></div>
+									<div style="display: -webkit-inline-flex; display: inline-flex;"><button type="submit" class="btn btn-primary" >Отправить</button>
+									</div> 
 								</div>
 							</div>
 						</form>
@@ -4923,9 +4925,17 @@ function rdate($param, $time=0) {
 
 		$("a[href*=#]").bind("click", function (e) {
 				var anchor = $(this);
+				var reson = 50; 
+				
+				if(anchor.attr('href') == '#show')
+				reson = -40;
+				else if(anchor.attr('href') == '#company')
+				reson = -90;
+				
 				$('html, body').stop().animate({
-					scrollTop: $(anchor.attr('href')).offset().top
+					scrollTop: $(anchor.attr('href')).offset().top - reson
 				}, 1000);
+				console.log('aaaa');
 				e.preventDefault();
 				return false;
 			});

@@ -9,8 +9,8 @@ $img = imagecreatefrompng("captcha/img/1.png");
 // Подключаем генератор текста
 function generate_code() 
 {    
-      $chars = 'abdefhknrstyz23456789'; // Задаем символы, используемые в капче. Разделитель использовать не надо.
-      $length = rand(4, 7); // Задаем длину капчи, в нашем случае - от 4 до 7
+      $chars = 'abcdefjgklmntszxv2345678'; // Задаем символы, используемые в капче. Разделитель использовать не надо.
+      $length = rand(3, 6); // Задаем длину капчи, в нашем случае - от 4 до 7
       $numChars = strlen($chars); // Узнаем, сколько у нас задано символов
       $str = '';
       for ($i = 0; $i < $length; $i++) {
@@ -55,8 +55,8 @@ function img_code($code) // $code - код нашей капчи, который
 		);
 	// Шрифты для капчи. Задавать можно сколько угодно, они будут выбираться случайно
 		$font_arr = array();
-			$font_arr[0]["fname"] = "assets/fonts/Ubuntu_regular.ttf";	// Имя шрифта. Я выбрал Droid Sans, он тонкий, плохо выделяется среди линий.
-			$font_arr[0]["size"] = rand(20, 30);				// Размер в pt
+			$font_arr[0]["fname"] = "assets/fonts/Roboto_regular.ttf";	// Имя шрифта. Я выбрал Droid Sans, он тонкий, плохо выделяется среди линий.
+			$font_arr[0]["size"] = rand(20, 30);				// Размер в pt 
 	// Генерируем "подстилку" для капчи со случайным фоном
 		$n = rand(0,sizeof($font_arr)-1);
 		$img_fn = $img_arr[rand(0, sizeof($img_arr)-1)];

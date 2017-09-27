@@ -4377,12 +4377,6 @@ function rdate($param, $time=0) {
 																<div class="form-group">
 																	<textarea class="form-control" placeholder="Ваши банковские реквизиты в свободной форме" id="bank2"  data-validation-required-message="Пожалуйста, введите текст сообщения!"></textarea>
 																	<p class="help-block text-danger"></p>
-																</div>
-																<div class="form-group">
-																	<img src='captcha.php' id='capcha-image'> 
-																	<a href="javascript:void(0);" onclick="document.getElementById('capcha-image').src='captcha.php?rid=' + Math.random();">Обновить капчу</a>
-																	<span>Введите капчу:</span>
-																	<input type="text" name="code">
 																</div> 
 																<div class="form-group">
 																	<textarea class="form-control" placeholder="Ваши банковские реквизиты в свободной форме" id="password"  data-validation-required-message="Пожалуйста, введите текст сообщения!" style="display:none;"></textarea>
@@ -4392,6 +4386,10 @@ function rdate($param, $time=0) {
 															<div class="clearfix"></div>
 															<div class="col-lg-12 text-center">
 																<div id="success"></div>
+																<img src='captcha.php' id='capcha-image'> 
+																<a href="javascript:void(0);" onclick="document.getElementById('capcha-image').src='captcha.php?rid=' + Math.random();">Обновить капчу</a>
+																<div><span>Введите капчу:</span>
+																<input type="text" name="code"></div>
 																<button id="special_12" type="submit" class="btn btn-primary">Отправить</button> 
 															</div>
 														</div>

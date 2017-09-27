@@ -7,6 +7,7 @@ function rdate($param, $time=0) {
 	if(strpos($param,'M')===false) return date($param, $time);
 		else return date(str_replace('M',$MonthNames[date('n',$time)-1],$param), $time);
 }
+ 
 ?>
 <!DOCTYPE html>
 <!--[if IE 8]>			<html class="ie ie8"> <![endif]-->
@@ -62,6 +63,7 @@ function rdate($param, $time=0) {
 						<li><b>Корр счет:</b> 30101810400000000225</li>
 						<li><b>Генеральный директор:</b><br>  Лихачева Наталья Александровна</li>  
 					</ul>
+					
 				</div> 
 				<div class="col-md-4">
 					<h6><i class="icon-envelope"></i> Контакты</h6>
@@ -4347,7 +4349,7 @@ function rdate($param, $time=0) {
 										<p>Заполните форму для автоматической отправки Вам нашего коммерческого предложения по выбранным позициям на указанный Вами адрес электронной почты.</p> </center>
 											<div class="row">
 												<div class="col-lg-12">
-													<form id="formSend">
+													<form id="formSend" enctype="multipart/form-data">
 														<div class="row">
 															<div class="col-md-6">
 																<div class="form-group">
@@ -4375,6 +4377,12 @@ function rdate($param, $time=0) {
 																<div class="form-group">
 																	<textarea class="form-control" placeholder="Ваши банковские реквизиты в свободной форме" id="bank2"  data-validation-required-message="Пожалуйста, введите текст сообщения!"></textarea>
 																	<p class="help-block text-danger"></p>
+																</div>
+																<div class="form-group">
+																	<img src='captcha.php' id='capcha-image'> 
+																	<a href="javascript:void(0);" onclick="document.getElementById('capcha-image').src='captcha.php?rid=' + Math.random();">Обновить капчу</a>
+																	<span>Введите капчу:</span>
+																	<input type="text" name="code">
 																</div> 
 																<div class="form-group">
 																	<textarea class="form-control" placeholder="Ваши банковские реквизиты в свободной форме" id="password"  data-validation-required-message="Пожалуйста, введите текст сообщения!" style="display:none;"></textarea>

@@ -1,4 +1,5 @@
 <?php 
+ 
 
 function generate_code() 
 {    
@@ -30,25 +31,23 @@ function check_code($code, $cookie)
 // НЕ ЗАБУДЬТЕ ЕГО ИЗМЕНИТЬ!
 
 // Работа с сессией, если нужно - раскомментируйте тут и в captcha.php, удалите строчки, где используются куки
-session_start();
-$cap = $_SESSION['captcha'];
-$cap = md5($cap);
-session_destroy();
+//session_start();
+//$cap = $_SESSION['captcha'];
+//$cap = md5($cap);
+//session_destroy();
 
-	if ($code == $cap){return TRUE;}else{return FALSE;} // если все хорошо - возвращаем TRUE (если нет - false)
+	if ($code == $cookie){return TRUE;}else{return FALSE;} // если все хорошо - возвращаем TRUE (если нет - false)
 	
 }
 
-// Обрабатываем полученный код
-if (isset($_POST['name'])) // Немного бессмысленная, но все же защита: проверяем, как обращаются к обработчику.
-{
+
     // Если код не введен (в POST-запросе поле 'code' пустое)...
         if ($_POST['code'] == '')
         {
             exit("Ошибка: введите капчу!"); //...то возвращаем ошибку
         }
     // Если код введен правильно (функция вернула TRUE), то...
-        if (check_code($_POST['code'], $cookie))
+        if (check_code($_POST['code'], $_COOKIE["captcha"]))
         {
             if((isset($_POST['name'])&&$_POST['name']!="")&&(isset($_POST['phone'])&&$_POST['phone']!="")&&(isset($_POST['email'])&&$_POST['email']!="")&&(isset($_POST['inn'])&&$_POST['inn']!=""))
             {   
@@ -1644,7 +1643,7 @@ if (isset($_POST['name'])) // Немного бессмысленная, но в
             
             xmail("info@glucauf.ru",htmlentities(trim($_POST['email'])),"Коммерческое предложение от ООО 'Глюкауф'",'Спасибо что выбрали нашу компанию!<br>Примите наше коммерческое предложение прикрепленное снизу данного письма.<br>По любым вопросам обращайтесь по номеру телефона: +7(926)588-41-31<br><br>__________________________________________________________________<br>С уважением, генеральный директор ООО "Глюкауф" <br> Лихачева Наталья Александровна',$file_name);
             
-            xmail("glucauf@glucauf.ru","info@glucauf.ru","Запрос на коммерческое предложение на сайте glucauf.ru",'Запрос коммерческого предложения на сайте glucauf.ru<br>
+            xmail("glucauf@glucauf.ru",htmlentities(trim($_POST['email'])),"Запрос на коммерческое предложение на сайте glucauf.ru",'Запрос коммерческого предложения на сайте glucauf.ru<br>
                       <html>
                           <head>
                               <title>'.$subject.'</title>
@@ -1661,17 +1660,5 @@ if (isset($_POST['name'])) // Немного бессмысленная, но в
                           </body>
                       </html>',$file_name); 
             }
-        }
-    // Если код введен неверно...
-        else 
-        {
-            exit("Ошибка: капча введена неверно!"); //...то возвращаем ошибку
-        }
-    }
-// Если к нам обращаются напрямую, то дело дрянь...
-else 
-{
-    exit("Access denied"); //..., возвращаем ошибку
-} 
-
+        }  
 ?>
